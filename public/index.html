@@ -17,7 +17,9 @@
       <a-marker preset="hiro">
         <!-- here define the content to display on top of the marker -->
         <a-entity
-          obj-model="obj: url(models/peixe/fish-2.obj); mtl: url(models/peixe/fish-2.mtl)"
+          scale="0.5 0.5 0.5"
+          position="0 0 0"
+          gltf-model="url(models/flor/scene.gltf)"
         ></a-entity>
         <!--<a-entity gltf-model="url(/path/to/tree.gltf)"></a-entity>-->
       </a-marker>
@@ -34,6 +36,15 @@
       <a-marker type="pattern" url="markers/letterC.patt">
         <!-- here define the content to display on top of the marker -->
         <a-box position="0 0.5 0" material="color: blue;"></a-box>
+      </a-marker>
+      <a-marker type="pattern" url="markers/letterD.patt">
+        <!-- here define the content to display on top of the marker -->
+        <a-entity
+          scale="0.3 0.3 0.3"
+          position="0 0.3 0"
+          rotation="180 90 -90"
+          obj-model="obj: url(models/peixe/fish-2.obj); mtl: url(models/peixe/fish-2.mtl)"
+        ></a-entity>
       </a-marker>
 
       <!-- define a simple camera -->
