@@ -16,28 +16,26 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <a-scene embedded arjs="sourceType: webcam;">
-      <a-marker type="pattern" url="/src/markers/letterA.patt">
+      <a-marker preset="hiro">
+        <!-- here define the content to display on top of the marker -->
+        <a-entity
+          obj-model="obj: url(models/peixe/fish-2.obj); mtl: url(models/peixe/fish-2.mtl)"
+        ></a-entity>
+        <!--<a-entity gltf-model="url(/path/to/tree.gltf)"></a-entity>-->
+      </a-marker>
+      <a-marker type="pattern" url="markers/letterA.patt">
         <!-- here define the content to display on top of the marker -->
         <a-box position="0 0.5 0" material="color: red;"></a-box>
       </a-marker>
 
-      <a-marker type="pattern" url="/src/markers/letterB.patt">
+      <a-marker type="pattern" url="markers/letterB.patt">
         <!-- here define the content to display on top of the marker -->
         <a-box position="0 0.5 0" material="color: green;"></a-box>
       </a-marker>
 
-      <a-marker type="pattern" url="/src/markers/letterC.patt">
+      <a-marker type="pattern" url="markers/letterC.patt">
         <!-- here define the content to display on top of the marker -->
         <a-box position="0 0.5 0" material="color: blue;"></a-box>
-      </a-marker>
-
-      <a-marker preset="hiro">
-        <!-- here define the content to display on top of the marker -->
-
-        <a-entity
-          obj-model="obj: url(/src/models/peixe/fish-2.obj); mtl: url(/src/models/peixe/fish-2.mtl)"
-        ></a-entity>
-        <!--<a-entity gltf-model="url(/path/to/tree.gltf)"></a-entity>-->
       </a-marker>
 
       <!-- define a simple camera -->
